@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sokič | Naravna energija. Slovenski okusi. (300 ml)</title>
+  <meta name="description" content="100% naravna slovenska energijska pijača Sokič (300 ml). Brez umetnih sladil, brez konzervansov, z naravnim kofeinom iz zelenega čaja in pravim sadjem.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= Zgornji Napovednik ================= -->
+  <div class="top-announcement">
+    <span>🇸🇮 <strong>100% naravna slovenska energijska pijača</strong> • Naravni kofein iz zelenega čaja</span>
+    <span class="announcement-badge">Brezplačna poštnina nad 20 €</span>
+    <span>Koda za 10% popust: <strong>SOKIC10</strong></span>
+  </div>
+
+  <!-- ================= Glavna Navigacija ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo" aria-label="Sokič domača stran">
+        <img src="assets/images/logo.svg" alt="sokič logotip" class="brand-logo-img">
+        <span class="brand-subtitle-badge">300 ml • Naravno</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#okusi">Okusi</a></li>
+          <li><a href="#prednosti">Zakaj Sokič?</a></li>
+          <li><a href="#naravno">Sestavine</a></li>
+          <li><a href="#kalkulacija">Zgodba & Stroški</a></li>
+          <li><a href="#mnenja">Mnenja</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-qr-nav" id="btnOpenQrModal" title="Odpri QR kodo za mobilni telefon">
+          <span>📱 QR koda</span>
+        </button>
+        <button class="btn-cart-nav" id="btnOpenCart" aria-label="Odpri nakupovalno košarico">
+          <span>🛒 Košarica</span>
+          <span class="cart-counter" id="cartCounterBadge">0</span>
+        </button>
+        <a href="#okusi" class="btn-nav-order">Naroči zdaj</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Odpri meni">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SEKCIJA ================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-container">
+      <img src="assets/images/hero_alps_bg.jpg" alt="Slovenske Alpe in narava" class="hero-bg-image">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-grid">
+        <!-- Leva stran: Tekst in poziv k akciji -->
+        <div class="hero-content">
+          <div class="hero-tagline-wrapper">
+            <span style="color:#22c55e;">🍃</span>
+            <span class="hero-tagline-text">NARAVNA ENERGIJA. SLOVENSKI OKUSI.</span>
+          </div>
+
+          <h1 class="hero-title">Slovenska energija na vsakem koraku.</h1>
+          <span class="hero-handwritten-slogan">Več energije. Brez padca.</span>
+
+          <p class="hero-desc">
+            Prva slovenska gazirana energijska pijača (<strong>300 ml</strong>), narejena iz pravega sadnega pireja,
+            hladno varjenega zelenega čaja in gorskih zelišč. Brez umetnih sladil, brez kemičnih konzervansov in brez nenadnega padca energije.
+          </p>
+
+          <div class="hero-badges-row">
+            <div class="hero-badge-item">
+              <span class="icon">🌿</span>
+              <span>100% Naravne sestavine</span>
+            </div>
+            <div class="hero-badge-item">
+              <span class="icon">⚡</span>
+              <span>Naravni kofein + L-teanin</span>
+            </div>
+            <div class="hero-badge-item">
+              <span class="icon">🍏</span>
+              <span>Brez umetnih sladil</span>
+            </div>
+            <div class="hero-badge-item">
+              <span class="icon">⛰️</span>
+              <span>Slovenski navdih</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#okusi" class="btn-primary">
+              <span>Izberi svoj okus (4,00 €)</span>
+              <span>→</span>
+            </a>
+            <a href="#naravno" class="btn-secondary">
+              <span>Kako nastaja?</span>
+            </a>
+          </div>
+
+          <div class="hero-price-tag">
+            <span>Priporočena cena:</span>
+            <strong>4,00 € na pločevinko (300 ml)</strong>
+            <span>• 100% reciklabilen aluminij</span>
+          </div>
+        </div>
+
+        <!-- Desna stran: Interaktivni oder s pločevinko -->
+        <div class="hero-stage-card">
+          <div class="stage-glow-aura" id="stageGlowAura"></div>
+          <span class="can-fresh-badge">🌿 All Natural & Fresh</span>
+          <span class="can-size-badge">300 ml</span>
+
+          <div class="stage-can-wrapper">
+            <img src="assets/images/can_zeleni_triglav.jpg" alt="Sokič Zeleni Triglav 300 ml" class="hero-can-img" id="heroCanImg">
+          </div>
+
+          <!-- Interaktivni izbirnik okusov v heroju -->
+          <div class="hero-flavor-selector">
+            <div class="flavor-nav-title">Izberite okus za predogled:</div>
+            <div class="flavor-nav-tabs">
+              <button class="flavor-tab-btn active" data-flavor="triglav">
+                <span>🍏</span> Zeleni Triglav
+              </button>
+              <button class="flavor-tab-btn" data-flavor="sadez">
+                <span>🫐</span> Planinski Sadež
+              </button>
+              <button class="flavor-tab-btn" data-flavor="karija">
+                <span>🍓</span> Sadna Karija
+              </button>
+            </div>
+
+            <div class="hero-active-details">
+              <div>
+                <div class="active-flavor-name" id="activeFlavorName">Zeleni Triglav</div>
+                <div class="active-flavor-notes" id="activeFlavorNotes">Zeleni čaj, hruška & sočno jabolko</div>
+              </div>
+              <button class="btn-hero-add-cart" id="btnHeroAddToCart">
+                <span>V košarico</span>
+                <span>4,00 €</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 STEBRI (Iz referenčnega plakata) ================= -->
+  <section class="section-pillars" id="prednosti">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-label">Prednosti pijače Sokič</span>
+        <h2 class="section-title">Čista energija, ki jo tvoje telo razume</h2>
+        <p class="section-subtitle">Ustvarjeno z mislijo na aktivne ljudi, študente in ljubitelje narave.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Steber 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">🍃</div>
+          <h3 class="pillar-title">Naravni sestav</h3>
+          <p class="pillar-desc">
+            Brez umetnih barvil, sintetičnih arom in kemičnih konzervansov. Narejeno iz pravega sadnega pireja in čiste gorske vode.
+          </p>
+        </div>
+
+        <!-- Steber 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⚡</div>
+          <h3 class="pillar-title">Dolgotrajna energija</h3>
+          <p class="pillar-desc">
+            B vitamini in naravni L-teanin iz hladno varjenega zelenega čaja zagotavljata miren, zbran fokus brez tresenja ali srčnega razbijanja.
+          </p>
+        </div>
+
+        <!-- Steber 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">❤️</div>
+          <h3 class="pillar-title">Dobro za tvoje telo</h3>
+          <p class="pillar-desc">
+            Brez umetnih sladil (0g aspartama in sukraloze) in brez belega rafiniranega sladkorja. Primerno za športnike in aktivne posameznike.
+          </p>
+        </div>
+
+        <!-- Steber 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⛰️</div>
+          <h3 class="pillar-title">Okusi Slovenije</h3>
+          <p class="pillar-desc">
+            Navdihnjeni z naravo, našimi gorami, gozdovi in bogato tradicijo domačih sadovnjakov ter gorskih zelišč.
+          </p>
+        </div>
+      </div>
+
+      <div class="pillars-slogan-strip">
+        <span class="pillars-handwritten-badge">"Slovenija v vsakem požirku. ♡"</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRGOVINA / NAŠI 3 OKUSI ================= -->
+  <section class="section-shop" id="okusi">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Naša Ponudba (300 ml)</span>
+        <h2 class="section-title">Izberite svoj najljubši okus</h2>
+        <p class="section-subtitle">Vsaka 300ml pločevinka ponuja popolno harmonijo pristnega slovenskega sadja, zelenega čaja in osvežujočih mehurčkov.</p>
+      </div>
+
+      <!-- Mreža 3 okusov -->
+      <div class="products-grid">
+        <!-- 1. ZELENI TRIGLAV -->
+        <div class="product-card" data-taste="triglav">
+          <span class="product-badge-corner badge-triglav">Okus 01 • Alpe</span>
+          <span class="product-volume-pill">300 ml</span>
+          
+          <div class="product-image-container">
+            <img src="assets/images/can_zeleni_triglav.jpg" alt="Sokič Zeleni Triglav 300 ml" class="product-can-img">
+          </div>
+
+          <div class="product-body">
+            <span class="product-flavor-number">Svežina & Fokus</span>
+            <h3 class="product-title">Zeleni Triglav</h3>
+            <p class="product-notes">
+              Navdihnjen z gorenjskimi sadovnjaki in svežim alpskim zrakom. Harmonija sočne hruške in gorenjskega jabolka z nežno grenčico zelenega čaja.
+            </p>
+
+            <div class="product-ingredients-snippet">
+              <strong>Sestavine po recepturi:</strong>
+              Zeleni čaj 90ml • Hruškin pire 60ml • Jabolčni koncentrat 10g • Gorska voda 30ml
+            </div>
+
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-currency">4,00 €</span>
+                <span class="price-unit">300 ml pločevinka</span>
+              </div>
+
+              <div class="product-actions">
+                <div class="qty-control">
+                  <button class="qty-btn btn-product-qty-minus">−</button>
+                  <input type="text" class="qty-input product-qty-val" value="1" readonly>
+                  <button class="qty-btn btn-product-qty-plus">+</button>
+                </div>
+                <button class="btn-add-cart btn-add-product" data-product="triglav">
+                  <span>V košarico</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PLANINSKI SADEŽ -->
+        <div class="product-card" data-taste="sadez">
+          <span class="product-badge-corner badge-sadez">Okus 02 • Gozd</span>
+          <span class="product-volume-pill">300 ml</span>
+          
+          <div class="product-image-container">
+            <img src="assets/images/can_planinski_sadez.jpg" alt="Sokič Planinski Sadež 300 ml" class="product-can-img">
+          </div>
+
+          <div class="product-body">
+            <span class="product-flavor-number">Divja Moč & Jagodičevje</span>
+            <h3 class="product-title">Planinski Sadež</h3>
+            <p class="product-notes">
+              Bogat, poln okus gozdnih malin in robid s hladilnim pridihom domače mete in kančkom aromatičnega divjega timijana za naravno odpornost.
+            </p>
+
+            <div class="product-ingredients-snippet">
+              <strong>Sestavine po recepturi:</strong>
+              Zeleni čaj • Malinov in robidov pire • Sveža gorska meta • Divji timijan
+            </div>
+
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-currency">4,00 €</span>
+                <span class="price-unit">300 ml pločevinka</span>
+              </div>
+
+              <div class="product-actions">
+                <div class="qty-control">
+                  <button class="qty-btn btn-product-qty-minus">−</button>
+                  <input type="text" class="qty-input product-qty-val" value="1" readonly>
+                  <button class="qty-btn btn-product-qty-plus">+</button>
+                </div>
+                <button class="btn-add-cart btn-add-product" data-product="sadez">
+                  <span>V košarico</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SADNA KARIJA -->
+        <div class="product-card" data-taste="karija">
+          <span class="product-badge-corner badge-karija">Okus 03 • Poletje</span>
+          <span class="product-volume-pill">300 ml</span>
+          
+          <div class="product-image-container">
+            <img src="assets/images/can_sadna_karija.jpg" alt="Sokič Sadna Karija 300 ml" class="product-can-img">
+          </div>
+
+          <div class="product-body">
+            <span class="product-flavor-number">Poletna Svežina & Cvetje</span>
+            <h3 class="product-title">Sadna Karija</h3>
+            <p class="product-notes">
+              Sladke, na soncu dozorele domače jagode v elegantni kombinaciji z dišečim cvetočim bezgom, svežim listom mete in blagodejnim zelenim čajem.
+            </p>
+
+            <div class="product-ingredients-snippet">
+              <strong>Sestavine po recepturi:</strong>
+              Zeleni čaj • Jagodni pire • Brezsladkorna bezgova aroma • Listi mete
+            </div>
+
+            <div class="product-footer">
+              <div class="product-price-box">
+                <span class="price-currency">4,00 €</span>
+                <span class="price-unit">300 ml pločevinka</span>
+              </div>
+
+              <div class="product-actions">
+                <div class="qty-control">
+                  <button class="qty-btn btn-product-qty-minus">−</button>
+                  <input type="text" class="qty-input product-qty-val" value="1" readonly>
+                  <button class="qty-btn btn-product-qty-plus">+</button>
+                </div>
+                <button class="btn-add-cart btn-add-product" data-product="karija">
+                  <span>V košarico</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trio Paket Banner (Posebna ugodnost) -->
+      <div class="bundle-banner">
+        <span class="bundle-ribbon">Prihranek 1,00 €</span>
+        <div class="bundle-image-box">
+          <img src="assets/images/bundle_trio_pack.jpg" alt="Sokič Trio paket 3x 300ml" loading="lazy">
+        </div>
+        <div class="bundle-content">
+          <span class="bundle-tag">Ekskluzivni komplet</span>
+          <h3 class="bundle-title">Trio Paket Okusov (3 × 300 ml)</h3>
+          <p class="bundle-desc">
+            Ne morete se odločiti za samo en okus? Naročite naš uradni Trio Paket, ki vsebuje vse tri slovenske okuse 
+            (Zeleni Triglav + Planinski Sadež + Sadna Karija) v priročni darilni nosilki iz 100% recikliranega kartona.
+          </p>
+          <ul class="bundle-features-list">
+            <li><span class="check-icon">✓</span> 1x Zeleni Triglav (300 ml) z jabolkom in hruško</li>
+            <li><span class="check-icon">✓</span> 1x Planinski Sadež (300 ml) z malino, robido in timijanom</li>
+            <li><span class="check-icon">✓</span> 1x Sadna Karija (300 ml) z jagodo, bezgom in meto</li>
+            <li><span class="check-icon">✓</span> Eko darilna kartonska nosilka vključena brezplačno</li>
+          </ul>
+          <div class="bundle-footer">
+            <div class="bundle-price-box">
+              <span class="bundle-new-price">11,00 €</span>
+              <span class="bundle-old-price">12,00 €</span>
+            </div>
+            <button class="btn-primary" id="btnAddBundle">
+              <span>Dodaj Trio Paket v košarico</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ALL NATURAL & FRESH / ZGODBA RECEPTURE ================= -->
+  <section class="section-natural" id="naravno">
+    <div class="container">
+      <div class="natural-grid">
+        <!-- Leva stran: Zgodba in koraki -->
+        <div>
+          <span class="natural-badge">All Natural & Fresh</span>
+          <h2 class="natural-title">Pristna narava brez laboratorijske kemije</h2>
+          <p class="natural-lead">
+            Za razliko od klasičnih energijskih pijač, polnih umetnega tavrina, sintetičnega kofeina in belega sladkorja, 
+            smo v Sokiču ubrali popolnoma naravno pot. Združili smo slovensko sadje in zelišča.
+          </p>
+
+          <div class="recipe-cards-column">
+            <div class="recipe-step-card">
+              <div class="step-num-badge">1</div>
+              <div class="step-info">
+                <h4>Hladno varjen zeleni čaj</h4>
+                <p>90 ml pravega zelenega čaja zagotavlja naraven kofein (96 mg na pločevinko) in L-teanin za enakomerno budnost brez živčnosti.</p>
+              </div>
+            </div>
+
+            <div class="recipe-step-card">
+              <div class="step-num-badge">2</div>
+              <div class="step-info">
+                <h4>100% pravi sadni pireji in koncentrati</h4>
+                <p>Nič umetnih arom sadja. Uporabljamo pravi hruškin pire, malinov pire, jagode in gorenjski jabolčni sok.</p>
+              </div>
+            </div>
+
+            <div class="recipe-step-card">
+              <div class="step-num-badge">3</div>
+              <div class="step-info">
+                <h4>Alpska zelišča in bezeg</h4>
+                <p>Domača gorska meta, alpski timijan in cvetoči bezeg dajejo pijači prijetno naravno svežino, ki odžeja in poživi.</p>
+              </div>
+            </div>
+
+            <div class="recipe-step-card">
+              <div class="step-num-badge">4</div>
+              <div class="step-info">
+                <h4>Čista gorska voda & prijetni mehurčki</h4>
+                <p>Nežno gazirana z naravno gorsko vodo za popolno svežino ob vsakem požirku.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desna stran: Primerjalna tabela -->
+        <div class="compare-box">
+          <h3 class="compare-title">Sokič v primerjavi z običajnimi pijačami</h3>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Lastnost</th>
+                <th class="col-sokic">Sokič (300 ml)</th>
+                <th>Klasična pijača</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vir kofeina</strong></td>
+                <td class="col-sokic">Hladno varjen zeleni čaj</td>
+                <td class="col-other">Sintetični kofein v prahu</td>
+              </tr>
+              <tr>
+                <td><strong>Profil energije</strong></td>
+                <td class="col-sokic">Mirna, enakomerna 4–5 ur</td>
+                <td class="col-other">Hiter dvig + padec po 45 min</td>
+              </tr>
+              <tr>
+                <td><strong>Sladkor</strong></td>
+                <td class="col-sokic">Samo sadni sladkor (5,8g)</td>
+                <td class="col-other">27g – 32g belega sladkorja</td>
+              </tr>
+              <tr>
+                <td><strong>Umetna sladila</strong></td>
+                <td class="col-sokic">0 % (Brez aspartama)</td>
+                <td class="col-other">Pogosto sukraloza ali acesulfam</td>
+              </tr>
+              <tr>
+                <td><strong>Sadni delež</strong></td>
+                <td class="col-sokic">Pravi sadni pire in sok</td>
+                <td class="col-other">0 % (sintetične arome)</td>
+              </tr>
+              <tr>
+                <td><strong>Izvor recepture</strong></td>
+                <td class="col-sokic">🇸🇮 Slovenski projekt</td>
+                <td class="col-other">Globalna tovarniška formula</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:24px; text-align:center;">
+            <a href="#okusi" class="btn-primary" style="width:100%;">Naroči svoj paket po 4,00 €</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PREGLED SESTAVIN & KALKULACIJA ================= -->
+  <section class="section-transparency" id="kalkulacija">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Transparentnost & Projekt Lenart</span>
+        <h2 class="section-title">Iskrena sestava in poštena cena</h2>
+        <p class="section-subtitle">Sokič je nastal kot projekt ustvarjanja boljše pijače. Tukaj so točne hranilne vrednosti in stroškovna struktura.</p>
+      </div>
+
+      <div class="transparency-grid">
+        <!-- Hranilne vrednosti -->
+        <div class="transparency-card">
+          <h3 class="transparency-card-title">
+            <span>🥗</span> Hranilna vrednost (na 300 ml)
+          </h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:16px;">
+            Povprečne vrednosti za 300 ml pločevinko (Zeleni Triglav):
+          </p>
+          <table class="nutrition-table">
+            <tbody>
+              <tr>
+                <td>Energijska vrednost</td>
+                <td class="val">295 kJ / 70 kcal</td>
+              </tr>
+              <tr>
+                <td>Maščobe</td>
+                <td class="val">0,0 g</td>
+              </tr>
+              <tr>
+                <td>- od tega nasičene maščobe</td>
+                <td class="val">0,0 g</td>
+              </tr>
+              <tr>
+                <td>Ogljikovi hidrati</td>
+                <td class="val">16,8 g</td>
+              </tr>
+              <tr>
+                <td>- od tega naravni sadni sladkorji</td>
+                <td class="val">15,6 g</td>
+              </tr>
+              <tr>
+                <td>Beljakovine</td>
+                <td class="val">0,2 g</td>
+              </tr>
+              <tr>
+                <td>Sol</td>
+                <td class="val">&lt; 0,02 g</td>
+              </tr>
+              <tr>
+                <td>Naravni kofein (zeleni čaj)</td>
+                <td class="val">96 mg (32 mg / 100 ml)</td>
+              </tr>
+              <tr>
+                <td>L-teanin (aminokislina za zbranost)</td>
+                <td class="val">50 mg</td>
+              </tr>
+              <tr>
+                <td>Vitamin B6 in B12</td>
+                <td class="val">100% PDV / RDA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Stroškovna kalkulacija iz šolskega projekta -->
+        <div class="transparency-card">
+          <h3 class="transparency-card-title">
+            <span>📊</span> Šolska stroškovna analiza (300 ml)
+          </h3>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:14px;">
+            Izračun neposrednih stroškov pridelave na enoto prototipa:
+          </p>
+          
+          <ul class="cost-breakdown-list">
+            <li class="cost-item">
+              <span class="label">Jabolčni sok & zeleni čaj (baza)</span>
+              <span class="val">0,35 €</span>
+            </li>
+            <li class="cost-item">
+              <span class="label">Pravi sadni pire (hruška / malina / jagoda)</span>
+              <span class="val">0,55 €</span>
+            </li>
+            <li class="cost-item">
+              <span class="label">Zelišča, brezsladkorna bezgova aroma & timijan</span>
+              <span class="val">0,25 €</span>
+            </li>
+            <li class="cost-item">
+              <span class="label">Voda, naravni minerali & gaziranje</span>
+              <span class="val">0,10 €</span>
+            </li>
+            <li class="cost-item">
+              <span class="label">Aluminijasta 300ml pločevinka s pokrovčkom</span>
+              <span class="val">1,25 €</span>
+            </li>
+            <li class="cost-item">
+              <span class="label">Vodoodporna etiketa & polnitev</span>
+              <span class="val">0,30 €</span>
+            </li>
+          </ul>
+
+          <div class="cost-total-row">
+            <span>Strošek kakovostne proizvodnje:</span>
+            <span class="val">~2,80 €</span>
+          </div>
+
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-top:12px; line-height:1.5;">
+            💡 <em>Z maloprodajno ceno <strong>4,00 €</strong> zagotavljamo pošteno plačilo pridelovalcem sadja, 
+            uporabo najkakovostnejših naravnih sestavin in trajnostno aluminijasto embalažo brez plastike.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MNENJA KUPCEV ================= -->
+  <section class="section-reviews" id="mnenja">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Mnenja Ljubiteljev Naravne Energije</span>
+        <h2 class="section-title">Kaj pravijo tisti, ki so poskusili Sokič?</h2>
+      </div>
+
+      <div class="reviews-summary-bar">
+        <div class="rating-score-box">
+          <span class="rating-number">4.9</span>
+          <div>
+            <div class="rating-stars">★★★★★</div>
+            <div class="reviews-count-text">Preverjena ocena na podlagi 287 mnenj</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Mnenje 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">JG</div>
+            <div class="reviewer-meta">
+              <h4>Jernej G.</h4>
+              <span>Ljubljana • Športnik</span>
+            </div>
+          </div>
+          <div class="review-rating-row">
+            <span class="review-stars">★★★★★</span>
+            <span class="verified-buyer-pill">Preverjen kupec</span>
+          </div>
+          <p class="review-text">
+            "Neverjetna razlika v primerjavi s klasičnimi energijskimi pijačami! Popil sem Zeleni Triglav pred treningom 
+            in energija je trajala celo popoldne brez kakršnegakoli tresenja rok ali nenadnega padca. Okus hruške in zelenega čaja je top!"
+          </p>
+          <div class="review-flavor-tag">Najljubši okus: Zeleni Triglav (300 ml)</div>
+        </div>
+
+        <!-- Mnenje 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">MK</div>
+            <div class="reviewer-meta">
+              <h4>Maja K.</h4>
+              <span>Maribor • Študentka medicine</span>
+            </div>
+          </div>
+          <div class="review-rating-row">
+            <span class="review-stars">★★★★★</span>
+            <span class="verified-buyer-pill">Preverjen kupec</span>
+          </div>
+          <p class="review-text">
+            "Za učenje med izpitnim obdobjem sem prej pila kavo in Red Bull, potem pa imela težave s spanjem. 
+            Sokič Sadna Karija z bezgom in jagodo je osvežilen, L-teanin pa res deluje – glava je bistra in mirna. Naročam že tretji paket!"
+          </p>
+          <div class="review-flavor-tag">Najljubši okus: Sadna Karija (300 ml)</div>
+        </div>
+
+        <!-- Mnenje 3 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">TB</div>
+            <div class="reviewer-meta">
+              <h4>Tomaž B.</h4>
+              <span>Kranj • Pohodnik & gornik</span>
+            </div>
+          </div>
+          <div class="review-rating-row">
+            <span class="review-stars">★★★★★</span>
+            <span class="verified-buyer-pill">Preverjen kupec</span>
+          </div>
+          <p class="review-text">
+            "Planinski Sadež je perfekten sopotnik za v nahrbtnik na hribe. Okus gozdnih malin z noto timijana je neverjetno naraven, 
+            kot bi jedel sveže nabrane gozdne sadeže ob gorski stezi. 4 eure za takšno kakovost je več kot poštena cena."
+          </p>
+          <div class="review-flavor-tag">Najljubši okus: Planinski Sadež (300 ml)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ SEKCIJA ================= -->
+  <section class="section-faq" id="faq">
+    <div class="container faq-container">
+      <div class="section-header">
+        <span class="section-label">Imate vprašanje?</span>
+        <h2 class="section-title">Pogosta vprašanja o pijači Sokič</h2>
+      </div>
+
+      <div class="faq-item open">
+        <button class="faq-question">
+          <span>Kaj dela Sokič drugačnega od običajnih energijskih pijač?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          Sokič vsebuje izključno naravni kofein iz hladno varjenega zelenega čaja in naravno aminokislino L-teanin. 
+          Ne dodajamo belega rafiniranega sladkorja, umetnih barvil ali konzervansov. Okus izvira iz 100% pravega sadnega pireja in gorskih zelišč.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Koliko kofeina vsebuje ena 300 ml pločevinka?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          Ena 300ml pločevinka vsebuje natanko 96 mg naravnega kofeina (32 mg na 100 ml), kar je ravno prav za optimalno zbranost in energijo 
+          (primerljivo s skodelico močne kave, vendar z bistveno bolj enakomernim sproščanjem zaradi L-teanina).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Kakšna je cena in kako je z dostavo po Sloveniji?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          Cena ene pločevinke (300 ml) je 4,00 €. Naročite lahko posamezne pločevinke ali Trio Paket za 11,00 €. 
+          Pri vseh naročilih nad 20,00 € je dostava po vsej Sloveniji popolnoma brezplačna! Dostavljamo preko Pošte Slovenije v 1–2 delovnih dneh.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          <span>Ali je pločevinka primerna za reciklažo?</span>
+          <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          Vse naše 300ml pločevinke so narejene iz 100% reciklabilnega aluminija, ki se lahko brez izgube kakovosti neskončnokrat ponovno predela. 
+          Tudi kartonska embalaža za Trio paket je iz nebeljenega recikliranega kartona.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOVIČKE (NEWSLETTER) ================= -->
+  <section class="section-newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-info">
+          <h3>Pridobite 10% popust na prvo naročilo!</h3>
+          <p>Prijavite se na novice o novih slovenskih okusih in takoj prejmite promocijsko kodo.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Vpišite vaš e-poštni naslov..." required>
+          <button type="submit" class="newsletter-btn">Pridobi kodo</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOGA (FOOTER) ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <img src="assets/images/logo.svg" alt="sokič" style="height:48px; filter:brightness(0) invert(1);">
+          <p class="footer-desc">
+            Sokič je prva 100% naravna slovenska energijska pijača (300 ml). 
+            Naravna energija, pravi sadni pireji in navdih iz slovenskih gora in tradicije.
+          </p>
+          <div style="font-weight:700; color:#4ade80;">🇸🇮 Ustvarjeno z ljubeznijo v Sloveniji</div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Naši okusi (300 ml)</h5>
+          <ul class="footer-links">
+            <li><a href="#okusi">Zeleni Triglav (Hruška & Jabolko)</a></li>
+            <li><a href="#okusi">Planinski Sadež (Malina & Timijan)</a></li>
+            <li><a href="#okusi">Sadna Karija (Jagoda & Bezeg)</a></li>
+            <li><a href="#okusi">Trio Paket (3x 300 ml)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>O projektu</h5>
+          <ul class="footer-links">
+            <li><a href="#naravno">Sestavine & Proizvodnja</a></li>
+            <li><a href="#kalkulacija">Stroškovnik projekta Lenart</a></li>
+            <li><a href="#prednosti">Zakaj zeleni čaj in L-teanin?</a></li>
+            <li><a href="#faq">Pogosta vprašanja</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Kontakt & Podpora</h5>
+          <ul class="footer-links">
+            <li><a href="mailto:info@sokic.si">📧 info@sokic.si</a></li>
+            <li><a href="tel:+38612345678">📞 +386 (0)1 234 56 78</a></li>
+            <li><span style="color:#94a3b8;">📍 Ljubljana / Lenart, Slovenija</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-warning">
+        ⚠️ <strong>Opozorilo:</strong> Visoka vsebnost kofeina (32 mg / 100 ml; 96 mg na 300 ml pločevinko). Ni priporočljivo za otroke, nosečnice ali doječe matere. Uživajte zmerno v sklopu raznolike prehrane.
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 sokič. Vse pravice pridržane. Šolski projekt Lenart.</div>
+        <div style="display:flex; gap:16px;">
+          <a href="#">Splošni pogoji poslovanja</a>
+          <a href="#">Varstvo osebnih podatkov</a>
+          <a href="#">Piškotki</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= KOŠARICA DRAWER ================= -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Nakupovalna košarica">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title">
+        <span>🛒</span>
+        <span>Vaša Košarica</span>
+      </h3>
+      <button class="btn-close-drawer" id="btnCloseCart" aria-label="Zapri košarico">✕</button>
+    </div>
+
+    <!-- Vrstica napredka za brezplačno poštnino -->
+    <div class="shipping-progress-bar-container">
+      <div class="shipping-status-text" id="freeShippingMsg">
+        Brezplačna dostava pri naročilu nad <strong>20,00 €</strong>
+      </div>
+      <div class="shipping-progress-track">
+        <div class="shipping-progress-fill" id="freeShippingBar"></div>
+      </div>
+    </div>
+
+    <!-- Seznam artiklov -->
+    <div class="cart-items-container" id="cartItemsList">
+      <!-- Dinamično vstavljeno z JS -->
+    </div>
+
+    <!-- Noga košarice z zneski in blagajno -->
+    <div class="cart-drawer-footer">
+      <div class="coupon-row">
+        <input type="text" class="coupon-input" id="couponInput" placeholder="Koda za popust (npr. SOKIC10)">
+        <button class="btn-apply-coupon" id="btnApplyCoupon">Unovči</button>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Vmesni znesek:</span>
+        <strong id="cartSubtotal">0,00 €</strong>
+      </div>
+
+      <div class="cart-summary-line" id="cartDiscountRow" style="display:none; color:var(--sokic-green-hover);">
+        <span>Popust:</span>
+        <strong id="cartDiscountAmount">-0,00 €</strong>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Dostava (Pošta Slovenije):</span>
+        <strong id="cartShippingCost">3,50 €</strong>
+      </div>
+
+      <div class="cart-summary-line total-line">
+        <span>Za plačilo:</span>
+        <strong id="cartGrandTotal">0,00 €</strong>
+      </div>
+
+      <button class="btn-checkout" id="btnCheckout">
+        <span>Nadaljuj na blagajno</span>
+        <span>→</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= MODAL BLAGAJNA (CHECKOUT MODAL) ================= -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="checkout-modal-card">
+      <button class="btn-modal-close" id="btnCloseCheckout" aria-label="Zapri blagajno">✕</button>
+
+      <!-- Obrazec za naročilo -->
+      <div id="checkoutFormWrapper">
+        <h3 class="checkout-modal-title">Zaključek naročila</h3>
+        <p class="checkout-modal-subtitle">Vnesite podatke za hitro dostavo po Sloveniji.</p>
+
+        <form class="checkout-form" id="checkoutForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderName">Ime *</label>
+              <input type="text" id="orderName" class="form-control" placeholder="Janez" required>
+            </div>
+            <div class="form-group">
+              <label for="orderSurname">Priimek *</label>
+              <input type="text" id="orderSurname" class="form-control" placeholder="Novak" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderEmail">E-pošta *</label>
+              <input type="email" id="orderEmail" class="form-control" placeholder="janez@primer.si" required>
+            </div>
+            <div class="form-group">
+              <label for="orderPhone">Telefonska številka *</label>
+              <input type="tel" id="orderPhone" class="form-control" placeholder="041 123 456" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="orderAddress">Ulica in hišna številka *</label>
+            <input type="text" id="orderAddress" class="form-control" placeholder="Slovenska cesta 15" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="orderPost">Poštna številka *</label>
+              <input type="text" id="orderPost" class="form-control" placeholder="1000" required>
+            </div>
+            <div class="form-group">
+              <label for="orderCity">Kraj *</label>
+              <input type="text" id="orderCity" class="form-control" placeholder="Ljubljana" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Način plačila *</label>
+            <div class="payment-options-grid">
+              <label class="payment-radio-card selected">
+                <input type="radio" name="paymentMethod" value="card" checked style="display:none;">
+                <span style="font-size:1.3rem;">💳</span>
+                <span>Kreditna kartica</span>
+              </label>
+
+              <label class="payment-radio-card">
+                <input type="radio" name="paymentMethod" value="flik" style="display:none;">
+                <span style="font-size:1.3rem;">⚡</span>
+                <span>Flik takoj</span>
+              </label>
+
+              <label class="payment-radio-card">
+                <input type="radio" name="paymentMethod" value="cod" style="display:none;">
+                <span style="font-size:1.3rem;">📦</span>
+                <span>Po povzetju</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="order-final-summary">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span>Skupaj za plačilo:</span>
+              <strong id="checkoutTotalPreview" style="font-size:1.15rem; color:var(--sokic-dark);">0,00 €</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-place-order">
+            <span>Oddaj naročilo</span>
+            <span>✓</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Potrditveni zaslon (Uspeh) -->
+      <div id="checkoutSuccessWrapper" style="display:none;">
+        <div class="success-screen">
+          <div class="success-icon-badge">✓</div>
+          <h3 class="success-title">Hvala za vaše naročilo!</h3>
+          <div class="success-order-num" id="successOrderNumber">#SOK-123456</div>
+          <p class="success-msg">
+            Vaše naročilo 100% naravnih pijač Sokič je bilo uspešno prejeto! 
+            Potrditveno sporočilo in sledilno številko pošiljke smo poslali na vaš e-poštni naslov. 
+            Paket bo pri vas v 1–2 delovnih dneh.
+          </p>
+          <button class="btn-primary" id="btnFinishOrder">Nazaj na trgovino</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL QR KODA ================= -->
+  <div class="modal-overlay" id="qrModal">
+    <div class="checkout-modal-card" style="max-width: 440px; text-align: center;">
+      <button class="btn-modal-close" id="btnCloseQrModal" aria-label="Zapri QR kodo">✕</button>
+      <div style="font-size: 2.2rem; margin-bottom: 8px;">📱</div>
+      <h3 class="checkout-modal-title">Skenirajte s telefonom</h3>
+      <p class="checkout-modal-subtitle" style="margin-bottom: 16px;">
+        Odprite kamero na telefonu in poskenirajte spodnjo QR kodo za ogled spletne strani:
+      </p>
+
+      <div style="background: #ffffff; padding: 16px; border-radius: 16px; display: inline-block; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 2px solid var(--border-color); margin-bottom: 16px;">
+        <img src="assets/images/qr_code.png" alt="Sokič QR Koda" style="width: 240px; height: 240px; display: block;">
+      </div>
+
+      <div style="background: var(--bg-main); padding: 14px 16px; border-radius: 12px; font-size: 0.88rem; color: var(--text-dark); margin-bottom: 16px; text-align: left;">
+        <div style="margin-bottom: 8px;">
+          <span style="display:inline-block; background:#22c55e; color:#ffffff; font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:999px; margin-bottom:4px;">☁️ CLOUDFLARE JAVNI DOSTOP</span><br>
+          <strong style="font-size:0.8rem; color:var(--text-muted);">Povezava (kjer koli / mobilni podatki):</strong><br>
+          <a href="https://starting-tracking-limits-statute.trycloudflare.com" target="_blank" style="color:var(--sokic-green-hover); font-weight:700; word-break:break-all;">https://starting-tracking-limits-statute.trycloudflare.com</a>
+        </div>
+        <div style="font-size: 0.78rem; color: var(--text-muted); border-top: 1px dashed var(--border-color); padding-top: 6px; margin-top: 6px;">
+          ✓ Deluje na vseh telefonih, tablicah in omrežjih (tudi mobilni podatki 4G/5G).
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btnDismissQr" style="width: 100%;">Zapri</button>
+    </div>
+  </div>
+
+  <!-- ================= TOAST OBVESTILA ================= -->
+  <div class="toast-stack" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
